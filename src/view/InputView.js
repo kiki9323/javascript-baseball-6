@@ -11,6 +11,11 @@ const InputView = {
     const input = Console.readLineAsync(MESSAGES.input.numbers);
     return input;
   },
+
+  async readRetryOrQuit() {
+    const input = Console.readLineAsync(MESSAGES.input.retryOrQuit);
+    return input;
+  },
 };
 
 export default InputView;

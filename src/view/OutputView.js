@@ -13,6 +13,14 @@ const OutputView = {
   printInitMessage() {
     this.print(MESSAGES.output.init);
   },
+
+  printEnd() {
+    this.print(MESSAGES.output.quit);
+  },
+
+  printHitStrikes() {
+    this.print(MESSAGES.output.hitStrikes);
+  },
 };
 
 export default OutputView;
