@@ -1,6 +1,5 @@
 import AnswerGenerator from '../domain/AnswerGenerator.js';
 import { Console } from '@woowacourse/mission-utils';
-import View from '../view/View.js';
 
 class GameController {
   #view;

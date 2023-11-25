@@ -2,7 +2,6 @@ import AppError from '../errors/error.js';
 
 class Validator {
   static validateUserNumbers(numbers) {
-    console.log(numbers);
     const splittedNumber = numbers.split('').map(Number);
     const noDuplicateNumber = new Set(splittedNumber);
 
