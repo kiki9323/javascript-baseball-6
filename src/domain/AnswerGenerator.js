@@ -1,23 +1,19 @@
+import COMMON from '../constants/common.js';
 import { MissionUtils } from '@woowacourse/mission-utils';
 
 class AnswerGenerator {
-  #answer;
-
-  constructor() {
-    this.#answer = [];
-  }
-
-  generateRandomNumber() {
-    while (this.#answer.length < 3) {
-      const number = MissionUtils.Random.pickNumberInRange(1, 9);
-      if (!this.#answer.includes(number)) {
-        this.#answer.push(number);
+  static generateRandomNumber() {
+    const answer = [];
+    while (answer.length < COMMON.range.length) {
+      const number = MissionUtils.Random.pickNumberInRange(COMMON.range.min, COMMON.range.max);
+      if (!answer.includes(number)) {
+        answer.push(number);
       }
     }
-    return this.#answer;
+    return answer;
   }
 
-  getAnswer() {
+  static getAnswer() {
     return this.generateRandomNumber();
   }
 }
